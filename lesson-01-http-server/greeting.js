@@ -10,6 +10,11 @@ let app = http.createServer(function (req, res) {
   }
   res.writeHead(200, {'Content-Type': 'text/html'})
   res.end(content)
+
+  let url = req.url
+    if (url==='/'){
+
+    } else 
 })
 
 const PORT = 8000
