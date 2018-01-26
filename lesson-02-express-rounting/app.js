@@ -2,12 +2,12 @@
 let express = require('express')
 let app = express()
 
-app.get('/', function (req,res) {
+app.get('/',  (req,res)=> {
     console.log('get request for /')
     res.status(302).send('hello')
 })
 
-app.get('/about', function (req,res) {
+app.get('/about', (req,res)=> {
     console.log('get request for /about')
     res.status(200).send ('hello world!!! i am Sam')
 
@@ -16,4 +16,4 @@ app.get('/about', function (req,res) {
 app.listen(8000,function () {
     console.log('app start at http://localhost:8000 ')
 })
-// Buoc 3 get request for /about
+// Buoc 4 mot cach dung khac function
