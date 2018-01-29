@@ -1,11 +1,22 @@
-let http = require('http')
-let webApp = http.createServer(function (req,res) {
-    res.writeHead(200, { 'Content-Type': 'text/plain' } )
-    res.end('Trang chủ')
+'use strict'
+let express = require('express')
+let app = express()
+
+app.get('/',  (req,res)=> {
+    console.log('get request for /')
+    res.status(302).send('Trang chủ')
+})
+
+app.get('/dsthu', (req,res)=> {
+    console.log('get request for /about')
+    res.status(200).send ('Danh sách thư')
+
 
 })
-const PROTOCOL ='http'
-//const LOCALHOST = '0.0.0.0'
-const PORT = 8000
-webApp.listen(PORT)
-console.log(`listening at port ${PROTOCOL}://localhost:${PORT}`)
+
+
+
+    app.listen(8000,function () {
+    console.log('app start at http://localhost:8000 ')
+})
+// Buoc 4 mot cach dung khac function
