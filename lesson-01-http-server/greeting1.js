@@ -7,6 +7,6 @@ let webApp = http.createServer(function (req,res) {
 const PROTOCOL ='http'
 //const LOCALHOST = 'localhost'
 const PORT = 8888
-webApp.listen(PORT.)
+webApp.listen(PORT)
 //console.log(`listening at port ${PROTOCOL}://${LOCALHOST}:${PORT}`)
 console.log(`listening at port ${PROTOCOL}://localhost:${PORT}`)
